@@ -9,5 +9,5 @@ chrome.webRequest.onBeforeRequest.addListener((d)=>{
         return{redirectUrl: d.url.replace("www", "smile")};
     }
 }, 
-{urls:["*://www.amazon.com/*"]}, 
+{urls:["*://www.amazon.com/", "*://www.amazon.com/*/dp/*"]}, 
 ["blocking"]);
